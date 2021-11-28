@@ -11,3 +11,10 @@ import matplotlib.pyplot as plt
 
 url = 'covid_22_noviembre.csv'
 data = pd.read_csv(url)
+
+#1 Número de casos de Contagiados en el País.
+
+num_pais = len(data)
+print("Punto 1")
+print(num_pais)
+print()
