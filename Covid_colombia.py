@@ -96,3 +96,9 @@ topDeptCo = data.groupby('Nombre departamento').size().sort_values(ascending = F
 print("Punto 11")
 print(topDeptCo)
 print()
+
+#12 Liste de mayor a menor los 10 departamentos con mas casos de fallecidos
+topDeptFa = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
+print("Punto 12")
+print(topDeptFa)
+print()
