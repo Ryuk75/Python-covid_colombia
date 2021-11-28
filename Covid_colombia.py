@@ -159,3 +159,11 @@ fechaContagios = data.groupby('Fecha de diagnóstico').size().sort_values(ascend
 print("Punto 21")
 print(fechaContagios)
 print()
+
+#22 Diga cual es la tasa de mortalidad y recuperación que tiene toda Colombia
+tasaMor = (len(data[data['Ubicación del caso'] == 'Fallecido']) / len(data)) * 100
+tasaRec = (len(data[data['Recuperado'] == 'Recuperado']) / len(data)) * 100
+print("Punto 22")
+print(tasaMor)
+print(tasaRec)
+print()
