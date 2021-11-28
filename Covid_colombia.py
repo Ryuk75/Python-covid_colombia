@@ -108,3 +108,10 @@ topDeptRe = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departament
 print("Punto 13")
 print(topDeptRe)
 print()
+
+#14 Liste de mayor a menor los 10 municipios con mas casos de contagiados
+topMunCo = data.groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
+print("Punto 14")
+print(topMunCo)
+print()
+
