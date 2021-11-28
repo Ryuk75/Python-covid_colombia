@@ -102,3 +102,9 @@ topDeptFa = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre dep
 print("Punto 12")
 print(topDeptFa)
 print()
+
+#13 Liste de mayor a menor los 10 departamentos con mas casos de recuperados
+topDeptRe = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
+print("Punto 13")
+print(topDeptRe)
+print()
