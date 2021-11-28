@@ -115,3 +115,8 @@ print("Punto 14")
 print(topMunCo)
 print()
 
+#15Liste de mayor a menor los 10 municipios con mas casos de fallecidos
+topMunFa = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False).head(10)
+print("Punto 15")
+print(topMunFa)
+print()
