@@ -189,3 +189,9 @@ atenCiu = data.groupby(['Nombre municipio','Ubicación del caso']).size()
 print("Punto 25")
 print(atenCiu)
 print()
+
+#26 Liste el promedio de edad por sexo por cada ciudad de contagiados
+promEdadCiu = data.groupby(['Nombre municipio','Sexo']).Edad.mean()
+print("Punto 26")
+print(promEdadCiu)
+print()
