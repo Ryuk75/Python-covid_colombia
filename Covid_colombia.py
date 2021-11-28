@@ -195,3 +195,12 @@ promEdadCiu = data.groupby(['Nombre municipio','Sexo']).Edad.mean()
 print("Punto 26")
 print(promEdadCiu)
 print()
+
+#27 Grafique las curvas de contagio, muerte y recuperación de toda Colombia acumulados
+data.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Contagios",figsize=(25,10))
+Fallecidos = data[data['Ubicación del caso'] == 'Fallecido']
+Fallecidos.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Fallecidos ",figsize=(25,10))
+Recuperado = data[data['Recuperado'] == 'Recuperado']
+Recuperado.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Recuperados",figsize=(25,10))
+plt.legend()
+plt.show()
