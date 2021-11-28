@@ -45,3 +45,10 @@ num_encasa = len(data[data['Ubicación del caso'] == 'Casa'])
 print("Punto 4")
 print(num_encasa)
 print()
+
+#5 Número de personas que se encuentran recuperados
+data['Recuperado'].replace('fallecido','Fallecido',inplace=True)
+num_recu = len(data[data['Recuperado'] == 'Recuperado'])
+print("Punto 5")
+print(num_recu)
+print()
