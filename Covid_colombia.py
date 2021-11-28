@@ -126,3 +126,9 @@ topMunRe = data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').
 print("Punto 16")
 print(topMunRe)
 print()
+
+#17 Liste agrupado por departamento y en orden de Mayor a menor las ciudades con mas casos de contagiados
+ciudadesCont = data.groupby(['Nombre departamento','Nombre municipio']).size().sort_values(ascending = False)
+print("Punto 17")
+print(ciudadesCont)
+print()
