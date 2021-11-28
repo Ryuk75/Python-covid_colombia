@@ -18,21 +18,18 @@ data['Estado'].replace('leve','Leve',inplace=True)
 data['Estado'].replace('LEVE','Leve',inplace=True)
 
 #1 Número de casos de Contagiados en el País.
-
 num_pais = len(data)
 print("Punto 1")
 print(num_pais)
 print()
 
 #2 Número de Municipios Afectados
-
 num_muni = len(data.groupby('Nombre municipio').size())
 print("Punto 2")
 print(num_muni)
 print()
 
 #3 Liste los municipios afectados (sin repetirlos)
-
 list_muni = data.groupby('Nombre municipio').size().sort_values(ascending = False)
 print("Punto 3")
 print(list_muni)
@@ -54,9 +51,14 @@ print(num_recu)
 print()
 
 #6 Número de personas que ha fallecido
-
 num_fall = len(data[data['Ubicación del caso'] == 'Fallecido'])
 print("Punto 6")
 print(num_fall)
+print()
+
+#7 Ordenar de Mayor a menor por tipo de caso (Importado, en estudio, Relacionado)
+tipoContagio = data.groupby('Tipo de contagio').size().sort_values(ascending = False)
+print("Punto 7")
+print(tipoContagio)
 print()
 
