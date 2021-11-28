@@ -153,3 +153,9 @@ paisProc = data.groupby('Nombre del país').size().sort_values(ascending = False
 print("Punto 20")
 print(paisProc)
 print()
+
+#21 Liste de mayor a menor las fechas donde se presentaron mas contagios
+fechaContagios = data.groupby('Fecha de diagnóstico').size().sort_values(ascending = False)
+print("Punto 21")
+print(fechaContagios)
+print()
