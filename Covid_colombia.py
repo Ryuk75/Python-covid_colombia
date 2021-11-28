@@ -52,3 +52,11 @@ num_recu = len(data[data['Recuperado'] == 'Recuperado'])
 print("Punto 5")
 print(num_recu)
 print()
+
+#6 Número de personas que ha fallecido
+
+num_fall = len(data[data['Ubicación del caso'] == 'Fallecido'])
+print("Punto 6")
+print(num_fall)
+print()
+
