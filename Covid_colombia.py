@@ -132,3 +132,9 @@ ciudadesCont = data.groupby(['Nombre departamento','Nombre municipio']).size().s
 print("Punto 17")
 print(ciudadesCont)
 print()
+
+#18 Número de Mujeres y hombres contagiados por ciudad por departamento
+genCiudad = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).size()
+print("Punto 18")
+print(genCiudad)
+print()
