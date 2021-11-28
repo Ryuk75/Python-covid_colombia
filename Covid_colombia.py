@@ -175,3 +175,11 @@ print("Punto 23")
 print(tasaMorDept)
 print(tasaRecDept)
 print()
+
+#24 Liste la tasa de mortalidad y recuperación que tiene cada ciudad
+tasaMorCiu = (data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False) / data[data['Ubicación del caso'] == 'Fallecido'].groupby('Nombre municipio').size().sort_values(ascending = False).sum()) * 100
+tasaRecCiu = (data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False) / data[data['Recuperado'] == 'Recuperado'].groupby('Nombre municipio').size().sort_values(ascending = False).sum()) * 100
+print("Punto 24")
+print(tasaMorCiu)
+print(tasaRecCiu)
+print()
