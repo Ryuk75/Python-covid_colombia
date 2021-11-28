@@ -144,3 +144,12 @@ promCiudad = data.groupby(['Nombre departamento','Nombre municipio','Sexo']).Eda
 print("Punto 19")
 print(promCiudad)
 print()
+
+#20 Liste de mayor a menor el número de contagiados por país de procedencia
+data['Nombre del país'].replace('ESTADOS UNIDOS','ESTADOS UNIDOS DE AMÉRICA',inplace=True)
+data['Nombre del país'].replace('VENEUELA','VENEZUELA',inplace=True)
+data['Nombre del país'].replace('MEXICO','MÉXICO',inplace=True)
+paisProc = data.groupby('Nombre del país').size().sort_values(ascending = False)
+print("Punto 20")
+print(paisProc)
+print()
