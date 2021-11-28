@@ -62,3 +62,11 @@ print("Punto 7")
 print(tipoContagio)
 print()
 
+#8 Número de departamentos afectados
+data['Nombre departamento'].replace('Tolima','TOLIMA',inplace=True)
+data['Nombre departamento'].replace('Caldas','CALDAS',inplace=True)
+num_dept = len(data.groupby('Nombre departamento').size().sort_values(ascending = False))
+print("Punto 8")
+print(num_dept)
+print()
+
