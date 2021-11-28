@@ -90,3 +90,9 @@ tipoAtencion = data.groupby('Ubicación del caso').size().sort_values(ascending 
 print("Punto 10")
 print(tipoAtencion)
 print()
+
+#11 Liste de mayor a menor los 10 departamentos con mas casos de contagiados
+topDeptCo = data.groupby('Nombre departamento').size().sort_values(ascending = False).head(10)
+print("Punto 11")
+print(topDeptCo)
+print()
