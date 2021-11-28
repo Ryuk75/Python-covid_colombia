@@ -18,3 +18,10 @@ num_pais = len(data)
 print("Punto 1")
 print(num_pais)
 print()
+
+#2 Número de Municipios Afectados
+
+num_muni = len(data.groupby('Nombre municipio').size())
+print("Punto 2")
+print(num_muni)
+print()
