@@ -183,3 +183,9 @@ print("Punto 24")
 print(tasaMorCiu)
 print(tasaRecCiu)
 print()
+
+#25 Liste por cada ciudad la cantidad de personas por atención
+atenCiu = data.groupby(['Nombre municipio','Ubicación del caso']).size()
+print("Punto 25")
+print(atenCiu)
+print()
