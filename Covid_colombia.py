@@ -70,3 +70,9 @@ print("Punto 8")
 print(num_dept)
 print()
 
+#9 Liste los departamentos afectados(sin repetirlos)
+list_dept= data.groupby('Nombre departamento').size().sort_values(ascending = False)
+print("Punto 9")
+print(list_dept)
+print()
+
