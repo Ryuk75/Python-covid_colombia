@@ -25,3 +25,10 @@ num_muni = len(data.groupby('Nombre municipio').size())
 print("Punto 2")
 print(num_muni)
 print()
+
+#3 Liste los municipios afectados (sin repetirlos)
+
+list_muni = data.groupby('Nombre municipio').size().sort_values(ascending = False)
+print("Punto 3")
+print(list_muni)
+print()
