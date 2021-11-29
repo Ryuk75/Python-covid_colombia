@@ -230,3 +230,9 @@ falleEdad = data[data['Ubicación del caso'] == 'Fallecido'].groupby('Edad').siz
 print("Punto 30")
 print(falleEdad)
 print()
+
+#31 Liste el porcentaje de personas por atención de toda Colombia
+porcAten = ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)) / ((data.groupby('Ubicación del caso').size().sort_values(ascending = False)).sum())) * 100
+print("Punto 31")
+print(porcAten)
+print()
