@@ -214,3 +214,13 @@ Recuperado = data[data['Recuperado'] == 'Recuperado']
 Recuperado.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Recuperados",figsize=(20,10))
 plt.legend()
 plt.show()
+
+#29 Grafique las curvas de contagio, muerte y recuperación de las 10
+#   ciudades con mas casos de contagiados acumulados
+data.groupby('Nombre municipio').size().sort_values(ascending=False).head(10).plot(label = "Contagios",figsize=(20,10))
+Fallecidos = data[data['Ubicación del caso'] == 'Fallecido']
+Fallecidos.groupby('Nombre municipio').size().sort_values(ascending=False).head(10).plot(label = "Fallecidos",figsize=(20,10))
+Recuperado = data[data['Recuperado'] == 'Recuperado']
+Recuperado.groupby('Nombre municipio').size().sort_values(ascending=False).head(10).plot(label = "Recuperados",figsize=(20,10))
+plt.legend()
+plt.show()
