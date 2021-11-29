@@ -199,8 +199,18 @@ print()
 #27 Grafique las curvas de contagio, muerte y recuperación de toda Colombia acumulados
 data.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Contagios",figsize=(25,10))
 Fallecidos = data[data['Ubicación del caso'] == 'Fallecido']
-Fallecidos.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Fallecidos ",figsize=(25,10))
+Fallecidos.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Fallecidos",figsize=(25,10))
 Recuperado = data[data['Recuperado'] == 'Recuperado']
 Recuperado.groupby('Fecha de diagnóstico').size().cumsum().plot(label = "Recuperados",figsize=(25,10))
+plt.legend()
+plt.show()
+
+#28 Grafique las curvas de contagio, muerte y recuperación de los 10 
+#   departamentos con mas casos de contagiados acumulados
+data.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Contagios",figsize=(20,10))
+Fallecidos = data[data['Ubicación del caso'] == 'Fallecido']
+Fallecidos.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Fallecidos",figsize=(20,10))
+Recuperado = data[data['Recuperado'] == 'Recuperado']
+Recuperado.groupby('Nombre departamento').size().sort_values(ascending=False).head(10).plot(label = "Recuperados",figsize=(20,10))
 plt.legend()
 plt.show()
